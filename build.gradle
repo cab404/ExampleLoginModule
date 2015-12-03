@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+version = 1
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile name: 'wifu-module'
+}
+
+//noinspection GroovyAssignabilityCheck
+jar {
+    manifest {
+        attributes (
+                'WiFuModule-Class': 'example.ExampleModule',
+                'WiFuModule-Version': version,
+                'WiFuModule-UpdateUrl': 'http://cab404.ru/all/bin/wifu/example.jar',
+                'WiFuModule-VersionUrl': 'http://cab404.ru/all/bin/wifu/example.version'
+        )
+    }
+}

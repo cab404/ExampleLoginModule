@@ -1,0 +1,3 @@
+Example module for WiFu.
+You can make something with it.
+This description will be included into jar, and used in module list.
